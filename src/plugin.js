@@ -172,7 +172,7 @@ class HlsQualitySelectorPlugin {
       const {width, height} = qualityList[i];
       const pixels = width > height ? height : width;
 
-      quality.enabled = (pixels === quality || quality === 'auto');
+      qualityList[i].enabled = (pixels === quality || quality === 'auto');
     }
     this._qualityButton.unpressButton();
   }
